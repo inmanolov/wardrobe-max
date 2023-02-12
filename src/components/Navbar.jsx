@@ -5,6 +5,7 @@ import Link from "next/link";
 
 const Navbar = () => {
     const { data: session, status } = useSession();
+    
 
     const logOutClickHandler = () => {
         signOut({ callbackUrl: '/' });
