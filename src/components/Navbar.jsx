@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Navbar = () => {
     const { data: session, status } = useSession();
-    
+
 
     const logOutClickHandler = () => {
         signOut({ callbackUrl: '/' });
@@ -20,7 +20,7 @@ const Navbar = () => {
             ) : session?.user ? (
                 <div className="mr-[20px] flex justify-between">
                     <div className="mr-[20px]">
-                        <div>{session.user.name}</div>
+                        <div>Hey <span className="font-bold">{session.user.name}</span></div>
                     </div>
                     <div onClick={logOutClickHandler}>
                         <Link href="/">Log Out</Link>
